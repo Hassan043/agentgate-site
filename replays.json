@@ -1,0 +1,705 @@
+[
+  {
+    "id": "Q01",
+    "question": "freezer alarm threshold",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"dispatch\",\"issued\",2]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"dispatch\",\"issued\",2]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q02",
+    "question": "original cold storage freezer alarm threshold minus twelve",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",1]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",1]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q03",
+    "question": "How long should we leave doors closed following an outage under the revised procedure?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"dispatch\",\"issued\",2]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"dispatch\",\"issued\",2]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q04",
+    "question": "weekly freezer inspection green binder",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",3]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",3]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q05",
+    "question": "nitrate sample amber glass bottle",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",1]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q06",
+    "question": "Who must sign when a sample changes hands?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q07",
+    "question": "meter rinsed deionized water",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",3]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"dispatch\",\"issued\",3]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"dispatch\",\"issued\",3]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q08",
+    "question": "Where is the spare vehicle key kept?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",1]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",1]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q09",
+    "question": "dispatch staging bay four",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",2]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"dispatch\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"original\",1]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",2]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]",
+          "[\"dispatch\",\"issued\",1]",
+          "[\"water-sampling\",\"issued\",3]",
+          "[\"cold-storage\",\"original\",1]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q10",
+    "question": "standard incident log green binder",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"cold-storage\",\"revised\",2]",
+          "[\"cold-storage\",\"original\",2]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q11",
+    "question": "Tuesday courier collection 14:20",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q12",
+    "question": "Which entrance should I use for handing off the amber case?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q13",
+    "question": "Thursday alarm drill blue door",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q14",
+    "question": "Who signed off on buying the replacement gaskets?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q15",
+    "question": "forklift refresher north classroom",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q16",
+    "question": "loading gate override Juniper",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"dispatch\",\"issued\",1]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"cold-storage\",\"revised\",1]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"dispatch\",\"issued\",3]",
+          "[\"water-sampling\",\"issued\",1]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"dispatch\",\"issued\",1]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"cold-storage\",\"revised\",1]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q17",
+    "question": "When will the late buffer delivery arrive?",
+    "rankings": {
+      "keyword": {
+        "firstRank": null,
+        "keys": []
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
+          "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
+          "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Q18",
+    "question": "standard incident log before resetting the control panel",
+    "rankings": {
+      "keyword": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]"
+        ]
+      },
+      "vector": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"water-sampling\",\"issued\",3]"
+        ]
+      },
+      "hybrid": {
+        "firstRank": 1,
+        "keys": [
+          "[\"dispatch\",\"issued\",3]",
+          "[\"cold-storage\",\"revised\",3]",
+          "[\"cold-storage\",\"original\",3]",
+          "[\"water-sampling\",\"issued\",2]",
+          "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
+          "[\"cold-storage\",\"original\",1]",
+          "[\"cold-storage\",\"revised\",1]",
+          "[\"dispatch\",\"issued\",2]",
+          "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
+          "[\"water-sampling\",\"issued\",3]"
+        ]
+      }
+    }
+  }
+]

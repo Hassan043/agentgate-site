@@ -1,53 +1,115 @@
 import { rank } from './rank.mjs';
 
-const form = document.querySelector('#search');
-const query = document.querySelector('#query');
-const source = document.querySelector('#source');
-const status = document.querySelector('#status');
-const results = document.querySelector('#results');
-let archive;
+const byId = id => document.getElementById(id);
+const form = byId('search');
+const query = byId('query');
+const source = byId('source');
+const status = byId('status');
+const results = byId('results');
+const detail = byId('detail');
+const cases = byId('case');
+const rankingMode = byId('ranking-mode');
+let activeMode = 'keyword';
+let dataset;
+let requestId = 0;
 
-function render(records) {
+function loadDataset() {
+  dataset ??= Promise.all(['corpus.json', 'replays.json'].map(async path => {
+    const response = await fetch('./' + path);
+    if (!response.ok) throw new Error('Archive unavailable');
+    return response.json();
+  })).catch(error => { dataset = undefined; throw error; });
+  return dataset;
+}
+
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+
+function showDetail(record, button) {
+  for (const other of results.querySelectorAll('button')) other.setAttribute('aria-pressed', String(other === button));
+  const passage = element('p', record.text, 'passage');
+  const meta = element('dl', undefined, 'citation-meta');
+  for (const [name, value] of [['Source', record.title], ['Citation', record.locator], ['Revision', record.revision], ['Revision SHA-256', record.hash]]) {
+    if (value) meta.append(element('dt', name), element('dd', value));
+  }
+  detail.replaceChildren(passage, meta);
+}
+
+function render(records, context) {
   results.replaceChildren();
+  detail.replaceChildren(element('p', 'Select a result to inspect its passage and source.'));
   status.textContent = records.length
-    ? `${records.length} ${records.length === 1 ? 'result' : 'results'} · keyword match`
-    : 'No matching passage. Try fewer words or change the source filter.';
-  for (const record of records) {
-    const article = document.createElement('article');
-    article.className = 'result';
-    const citation = document.createElement('p');
-    citation.className = 'citation';
-    citation.textContent = `${record.type} · ${record.locator} · Revision ${record.revision}`;
-    const title = document.createElement('h3');
-    title.textContent = record.title;
-    const text = document.createElement('p');
-    text.textContent = record.text;
-    article.append(citation, title, text);
-    results.append(article);
+    ? `${records.length} ${records.length === 1 ? 'result' : 'results'} · ${context}`
+    : `No results · ${context}`;
+  for (const [index, record] of records.entries()) {
+    const button = element('button', undefined, 'result');
+    button.type = 'button';
+    button.setAttribute('aria-pressed', 'false');
+    button.append(
+      element('span', String(index + 1).padStart(2, '0'), 'rank'),
+      element('strong', record.title),
+      element('span', `${record.type} · ${record.locator} · ${record.revision}`, 'result-meta'),
+    );
+    button.addEventListener('click', () => showDetail(record, button));
+    results.append(button);
+    if (index === 0) showDetail(record, button);
   }
 }
 
 async function run() {
-  if (!query.value.trim()) {
-    status.textContent = 'Enter a search query.';
-    return;
-  }
-  status.textContent = 'Searching the archive…';
+  const id = ++requestId;
+  status.textContent = 'Loading evidence…';
   try {
-    archive ??= fetch('./corpus.json').then(response => {
-      if (!response.ok) throw new Error('unavailable');
-      return response.json();
-    });
-    const records = await archive;
-    render(rank(records, query.value, source.value));
+    const [records, replays] = await loadDataset();
+    if (requestId !== id) return;
+    if (!cases.options.length) {
+      for (const item of replays) {
+        const option = element('option', item.id + ' · ' + item.question);
+        option.value = item.id;
+        cases.append(option);
+      }
+      cases.value = 'Q02';
+    }
+    if (activeMode === 'keyword') {
+      const value = query.value.trim();
+      render(rank(records, value, source.value), value ? 'browser keyword search' : 'enter a search query');
+    } else {
+      const selected = replays.find(item => item.id === cases.value);
+      const saved = selected.rankings[rankingMode.value];
+      const byKey = new Map(records.map(record => [record.key, record]));
+      const rankLabel = saved.firstRank === null ? 'missed at top 10' : 'first relevant at rank ' + saved.firstRank;
+      const matches = saved.keys.map(key => byKey.get(key));
+      if (matches.some(match => !match)) throw new Error('Citation mismatch');
+      render(matches, 'recorded · ' + rankLabel);
+    }
   } catch {
-    archive = undefined;
-    results.replaceChildren();
-    status.textContent = 'The sample archive is unavailable. Try again shortly.';
+    if (requestId === id) {
+      results.replaceChildren();
+      detail.replaceChildren();
+      status.textContent = 'The sample archive could not load. Please try again.';
+    }
   }
 }
 
+function switchMode(mode) {
+  activeMode = mode;
+  const isKeyword = mode === 'keyword';
+  byId('keywords-tab').setAttribute('aria-pressed', String(isKeyword));
+  byId('semantic-tab').setAttribute('aria-pressed', String(!isKeyword));
+  byId('keyword-panel').hidden = !isKeyword;
+  byId('semantic-panel').hidden = isKeyword;
+}
+
 form.addEventListener('submit', event => { event.preventDefault(); void run(); });
+byId('keywords-tab').addEventListener('click', () => { switchMode('keyword'); void run(); });
+byId('semantic-tab').addEventListener('click', () => { switchMode('semantic'); void run(); });
+cases.addEventListener('change', run);
+rankingMode.addEventListener('change', run);
+source.addEventListener('change', run);
 for (const button of document.querySelectorAll('[data-query]')) {
   button.addEventListener('click', () => {
     query.value = button.dataset.query;
@@ -55,3 +117,15 @@ for (const button of document.querySelectorAll('[data-query]')) {
     void run();
   });
 }
+for (const button of document.querySelectorAll('[data-case]')) {
+  button.addEventListener('click', async () => {
+    switchMode('semantic');
+    await run();
+    cases.value = button.dataset.case;
+    await run();
+    byId('workbench').scrollIntoView();
+    cases.focus({ preventScroll: true });
+  });
+}
+query.value = 'freezer alarm threshold';
+void run();

@@ -1,7 +1,65 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore AgentGate’s approach to agent security and try a public document retrieval demo."><title>AgentGate — Evidence and control for AI agents</title><link rel="stylesheet" href="./styles.css"><script type="module" src="./archive.mjs"></script></head>
-<body><header class="bar wrap"><a href="#" class="wordmark">◈ <span>AgentGate</span></a><nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#archive" class="nav-cta">Try Docsearch</a></nav></header>
-<main><section class="hero wrap"><div class="hero-copy"><p class="eyebrow">AGENT SECURITY INFRASTRUCTURE</p><h1>AI agents need<br><em>clear boundaries.</em></h1><p class="lede">AgentGate is being designed to enforce what an AI agent can access and where it can send data. Explore Docsearch, the working document retrieval reference.</p><div class="actions"><a href="#archive" class="primary">Explore the archive</a><a href="#approach">See the approach</a></div></div><div class="art" aria-hidden="true"><i class="orbit one"></i><i class="orbit two"></i><i class="orbit three"></i><div class="core"><b></b><b></b><b></b></div><span class="spark">✦</span></div></section>
-<section id="approach" class="wrap approach"><p class="eyebrow">THE PRODUCT</p><h2>Evidence first. Policy next.</h2><div class="grid"><article><p class="tag live">AVAILABLE DEMO</p><h3>Trace every result</h3><p>Docsearch returns source passages with PDF page or email citations. When a document changes, its earlier revision remains available for inspection.</p></article><article><p class="tag">PLANNED GATEWAY</p><h3>Enforce tool boundaries</h3><p>The planned gateway will apply identity, access, approval, and data destination rules before an agent can take action.</p></article></div></section>
-<section id="archive" class="wrap section-archive"><div class="archive-label"><p class="eyebrow">PUBLIC SAMPLE</p><h2>Search the Cedar Annex archive.</h2><p>Explore authored PDF and email passages. This public sample uses browser-side keyword search. The separate local Docsearch build also supports BGE semantic retrieval.</p></div><div class="searchbox"><form id="search"><label for="query">Search sample documents</label><div class="fields"><input id="query" type="search" required maxlength="160" placeholder="Try freezer alarm threshold"><select id="source" aria-label="Source type"><option value="all">All sources</option><option value="PDF">PDF</option><option value="Email">Email</option></select><button>Search</button></div></form><div class="examples" aria-label="Example searches"><button type="button" data-query="freezer alarm threshold">Freezer threshold</button><button type="button" data-query="courier collection">Courier collection</button><button type="button" data-query="loading gate override">Gate override</button></div><p id="status" role="status">Choose a sample query above.</p><div id="results"></div></div></section></main>
-<footer class="wrap footer"><a href="#" class="wordmark">◈ AgentGate</a><a href="https://github.com/Hassan043/agentgate-site">Website source on GitHub</a></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
+  <meta name="theme-color" content="#101014">
+  <title>AgentGate — Traceable evidence for AI agents</title>
+  <link rel="stylesheet" href="./styles.css?v=3">
+  <script type="module" src="./archive.mjs?v=3"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="shell nav">
+  <a href="./" class="brand" aria-label="AgentGate home"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span>AgentGate</a>
+  <nav aria-label="Main navigation"><a href="#workbench">Workbench</a><a href="#evaluation">Evaluation</a><a href="#roadmap">Roadmap</a></nav>
+  <a class="outline nav-action" href="#workbench">Open demo <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section class="shell hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><i></i> AgentGate / Docsearch</p>
+      <h1>Trace the evidence.<br><em>Keep control.</em></h1>
+      <p class="lede">Search across documents and email, inspect the exact passage behind a result, and see how a real local model performed.</p>
+      <div class="actions"><a class="primary" href="#workbench">Open the workbench <span aria-hidden="true">↗</span></a><a class="text-link" href="#evaluation">Read the evaluation</a></div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-grid"></div><div class="glow"></div>
+      <div class="halo halo-outer"></div><div class="halo halo-inner"></div>
+      <div class="prism"><span class="plane plane-back"></span><span class="plane plane-middle"></span><span class="plane plane-front"><b></b><b></b><b></b><b></b></span></div>
+      <div class="art-caption"><span>DOCSEARCH</span><span>PDF & EMAIL EVIDENCE</span></div>
+    </div>
+  </section>
+  <section class="shell section" id="workbench" aria-labelledby="workbench-title">
+    <div class="section-heading"><div><p class="eyebrow"><i></i> Interactive demo</p><h2 id="workbench-title">Evidence workbench</h2></div><p>Explore the authored Cedar Annex corpus. Inspect original and revised passages side by side through their citations.</p></div>
+    <div class="workbench">
+      <div class="tabs" role="group" aria-label="Workbench mode">
+        <button id="keywords-tab" aria-pressed="true" type="button">Live keyword search</button>
+        <button id="semantic-tab" aria-pressed="false" type="button">Recorded semantic runs</button>
+      </div>
+      <div id="keyword-panel" class="controls">
+        <form id="search"><label for="query">Search the sample archive</label><div class="field-row"><input id="query" type="search" maxlength="160" required placeholder="Freezer alarm threshold"><select id="source" aria-label="Filter by source"><option value="all">All sources</option><option value="PDF">PDF</option><option value="Email">Email</option></select><button class="primary" type="submit">Search</button></div></form>
+        <div class="examples" aria-label="Sample queries"><button type="button" data-query="freezer alarm threshold">Freezer threshold</button><button type="button" data-query="courier collection">Courier collection</button><button type="button" data-query="loading gate override">Gate override</button></div>
+      </div>
+      <div id="semantic-panel" class="controls" hidden>
+        <p class="mode-info">Explore saved rankings from the real BGE Small English model run on the authored archive. These are recorded runs. Live inference remains in the local app.</p>
+        <div class="replay-fields"><label>Evaluation question<select id="case"></select></label><label>Recorded mode<select id="ranking-mode"><option value="vector">Vector · BGE</option><option value="hybrid">Hybrid · BGE + keyword</option><option value="keyword">Keyword baseline</option></select></label></div>
+      </div>
+      <div class="workspace"><div class="result-column"><p class="workspace-heading" id="status" role="status">Loading the archive…</p><div id="results" class="result-list"></div></div><aside class="inspector" aria-labelledby="inspector-title"><p class="eyebrow">Citation inspector</p><h3 id="inspector-title">Stored evidence</h3><div id="detail"><p>Select a result to inspect its passage and source.</p></div></aside></div>
+    </div>
+  </section>
+  <section class="shell section evaluation" id="evaluation" aria-labelledby="evaluation-title">
+    <div class="section-heading"><div><p class="eyebrow"><i></i> Authored evaluation</p><h2 id="evaluation-title">What the runs showed</h2></div><p>18 questions written after reading the synthetic corpus. Scores show retrieval on this small set. Broader retrieval quality is unmeasured.</p></div>
+    <div class="table-wrap"><table><caption>Relevant citation at rank 1</caption><thead><tr><th scope="col">Mode</th><th scope="col">Keyword baseline</th><th scope="col">Fake-vector diagnostic</th><th scope="col">Local BGE run</th></tr></thead><tbody><tr><th scope="row">Keyword</th><td>11 / 18</td><td>—</td><td>—</td></tr><tr><th scope="row">Vector</th><td>—</td><td>2 / 18</td><td>18 / 18</td></tr><tr><th scope="row">Hybrid</th><td>—</td><td>11 / 18</td><td>18 / 18</td></tr></tbody></table></div>
+    <div class="case-grid"><article><p class="eyebrow">Q02 · REVISION IDENTITY</p><h3>The original freezer threshold</h3><p>Keyword and both fake-vector modes missed the original page in the top 10. Local BGE vector and hybrid put the correct original revision first.</p><button type="button" class="outline replay" data-case="Q02">Replay this question <span aria-hidden="true">↗</span></button></article><article><p class="eyebrow">Q14 · EMAIL PARAPHRASE</p><h3>Who approved the replacement gaskets?</h3><p>Keyword missed at top 10. The fake-vector modes put an unrelated drill first. Local BGE vector and hybrid returned the invoice first.</p><button type="button" class="outline replay" data-case="Q14">Replay this question <span aria-hidden="true">↗</span></button></article></div>
+  </section>
+  <section class="shell section roadmap" id="roadmap"><div class="section-heading"><div><p class="eyebrow"><i></i> Product scope</p><h2>Where AgentGate stands</h2></div><p>Docsearch is the working retrieval reference. The security gateway has a separate implementation and evaluation path.</p></div><div class="roadmap-grid">
+    <article><span class="status-label ready">Available</span><h3>Public evidence demo</h3><p>Search synthetic PDF and email passages in your browser. Compare citations and retained revisions.</p></article>
+    <article><span class="status-label ready">Verified locally</span><h3>Semantic retrieval</h3><p>Python, PostgreSQL and pgvector with a local 384-dimensional BGE index. The workbench replays preserved results.</p></article>
+    <article><span class="status-label">Planned</span><h3>Tool authorization gateway</h3><p>Identity-bound tool calls, data destination rules, approvals and audit evidence. The first planned test is a synthetic invoice workflow.</p></article>
+  </div></section>
+</main>
+<footer class="shell footer"><a href="./" class="brand">AgentGate</a><a href="https://github.com/Hassan043/agentgate-site">Website source</a></footer>
+</body>
+</html>

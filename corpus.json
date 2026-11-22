@@ -1,128 +1,164 @@
 [
   {
+    "key": "[\"cold-storage\",\"original\",1]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "original",
     "locator": "Page 1",
-    "text": "Cedar Annex cold storage manual. The standard cold storage freezer alarm threshold is minus twelve degrees Celsius. The backup probe is mounted beside the blue door. Log every excursion before resetting the control panel."
+    "text": "Cedar Annex cold storage manual. The standard cold storage freezer alarm threshold is minus twelve degrees Celsius. The backup probe is mounted beside the blue door. Log every excursion before resetting the control panel.",
+    "hash": "13fe20b56da46919dce06dff738c9bf12faf78a9b42913f7eb319e32d7afea42"
   },
   {
+    "key": "[\"cold-storage\",\"original\",2]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "original",
     "locator": "Page 2",
-    "text": "After a cold storage power cut, keep the freezer doors shut for forty minutes. Call the duty engineer before transferring trays to a standby cabinet."
+    "text": "After a cold storage power cut, keep the freezer doors shut for forty minutes. Call the duty engineer before transferring trays to a standby cabinet.",
+    "hash": "13fe20b56da46919dce06dff738c9bf12faf78a9b42913f7eb319e32d7afea42"
   },
   {
+    "key": "[\"cold-storage\",\"original\",3]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "original",
     "locator": "Page 3",
-    "text": "The weekly freezer inspection form is filed in the green binder. Use the standard incident log before resetting the control panel."
+    "text": "The weekly freezer inspection form is filed in the green binder. Use the standard incident log before resetting the control panel.",
+    "hash": "13fe20b56da46919dce06dff738c9bf12faf78a9b42913f7eb319e32d7afea42"
   },
   {
+    "key": "[\"cold-storage\",\"revised\",1]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "revised",
     "locator": "Page 1",
-    "text": "Cedar Annex cold storage manual. The standard cold storage freezer alarm threshold is minus sixteen degrees Celsius. The backup probe is mounted beside the yellow door. Log every excursion before resetting the control panel."
+    "text": "Cedar Annex cold storage manual. The standard cold storage freezer alarm threshold is minus sixteen degrees Celsius. The backup probe is mounted beside the yellow door. Log every excursion before resetting the control panel.",
+    "hash": "a4dc828455cadbd257c7fb69105d08a219f8f517d313f7e8b9e92341509705fb"
   },
   {
+    "key": "[\"cold-storage\",\"revised\",2]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "revised",
     "locator": "Page 2",
-    "text": "After a cold storage power cut, keep the freezer doors shut for fifty minutes. Call the duty engineer before transferring trays to a standby cabinet."
+    "text": "After a cold storage power cut, keep the freezer doors shut for fifty minutes. Call the duty engineer before transferring trays to a standby cabinet.",
+    "hash": "a4dc828455cadbd257c7fb69105d08a219f8f517d313f7e8b9e92341509705fb"
   },
   {
+    "key": "[\"cold-storage\",\"revised\",3]",
     "type": "PDF",
     "title": "Cold Storage Manual",
     "revision": "revised",
     "locator": "Page 3",
-    "text": "The weekly freezer inspection form is filed in the green binder. Use the standard incident log before resetting the control panel."
+    "text": "The weekly freezer inspection form is filed in the green binder. Use the standard incident log before resetting the control panel.",
+    "hash": "a4dc828455cadbd257c7fb69105d08a219f8f517d313f7e8b9e92341509705fb"
   },
   {
+    "key": "[\"water-sampling\",\"issued\",1]",
     "type": "PDF",
     "title": "Water Sampling Guide",
     "revision": "issued",
     "locator": "Page 1",
-    "text": "Cedar Annex water sampling guide. River samples are collected upstream of the footbridge. Use an amber glass bottle for the nitrate sample."
+    "text": "Cedar Annex water sampling guide. River samples are collected upstream of the footbridge. Use an amber glass bottle for the nitrate sample.",
+    "hash": "66ddf9f095f0509d0edc23de01f41f32f87adbba2496f539f52036656c923a6b"
   },
   {
+    "key": "[\"water-sampling\",\"issued\",2]",
     "type": "PDF",
     "title": "Water Sampling Guide",
     "revision": "issued",
     "locator": "Page 2",
-    "text": "Water sampling custody forms require the sampler and receiver signatures. Carry completed forms in the green binder. Use the standard incident log before resetting the control panel."
+    "text": "Water sampling custody forms require the sampler and receiver signatures. Carry completed forms in the green binder. Use the standard incident log before resetting the control panel.",
+    "hash": "66ddf9f095f0509d0edc23de01f41f32f87adbba2496f539f52036656c923a6b"
   },
   {
+    "key": "[\"water-sampling\",\"issued\",3]",
     "type": "PDF",
     "title": "Water Sampling Guide",
     "revision": "issued",
     "locator": "Page 3",
-    "text": "Store the calibration solution in the locked west cabinet. A water sampling meter must be rinsed twice with deionized water before calibration."
+    "text": "Store the calibration solution in the locked west cabinet. A water sampling meter must be rinsed twice with deionized water before calibration.",
+    "hash": "66ddf9f095f0509d0edc23de01f41f32f87adbba2496f539f52036656c923a6b"
   },
   {
+    "key": "[\"dispatch\",\"issued\",1]",
     "type": "PDF",
     "title": "Dispatch Handbook",
     "revision": "issued",
     "locator": "Page 1",
-    "text": "Cedar Annex dispatch handbook. The reserve van key hangs in locker seven. Drivers collect the loading checklist from the dispatch desk."
+    "text": "Cedar Annex dispatch handbook. The reserve van key hangs in locker seven. Drivers collect the loading checklist from the dispatch desk.",
+    "hash": "170f7ca249a78aa74ced00049db6dece256cb92f150361998df47e3bbad83b0e"
   },
   {
+    "key": "[\"dispatch\",\"issued\",2]",
     "type": "PDF",
     "title": "Dispatch Handbook",
     "revision": "issued",
     "locator": "Page 2",
-    "text": "Overnight dispatch staging uses bay four. The dispatch desk calls the duty engineer if the loading gate jams."
+    "text": "Overnight dispatch staging uses bay four. The dispatch desk calls the duty engineer if the loading gate jams.",
+    "hash": "170f7ca249a78aa74ced00049db6dece256cb92f150361998df47e3bbad83b0e"
   },
   {
+    "key": "[\"dispatch\",\"issued\",3]",
     "type": "PDF",
     "title": "Dispatch Handbook",
     "revision": "issued",
     "locator": "Page 3",
-    "text": "The standard incident log can be found in the green binder. Use the standard incident log before resetting the control panel."
+    "text": "The standard incident log can be found in the green binder. Use the standard incident log before resetting the control panel.",
+    "hash": "170f7ca249a78aa74ced00049db6dece256cb92f150361998df47e3bbad83b0e"
   },
   {
+    "key": "[\"courier\",\"issued\",\"<courier@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Courier route update",
     "revision": "issued",
     "locator": "<courier@cedar.example.invalid>",
-    "text": "The Tuesday courier collection moved to 14:20. Hand the amber sample case to the driver at the east entrance."
+    "text": "The Tuesday courier collection moved to 14:20. Hand the amber sample case to the driver at the east entrance.",
+    "hash": "0e5655c5197965a84da1b1644a28ed5479cf59e46f1974f99ce39d9b68ed9ad5"
   },
   {
+    "key": "[\"door-drill\",\"issued\",\"<door-drill@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Thursday door drill",
     "revision": "issued",
     "locator": "<door-drill@cedar.example.invalid>",
-    "text": "The Thursday alarm drill uses the blue door. The maintenance panel will stay powered during the drill."
+    "text": "The Thursday alarm drill uses the blue door. The maintenance panel will stay powered during the drill.",
+    "hash": "735269ac12670da89c4381ce93ffece2935d801cc9ab742a1a5ca1e4915b129c"
   },
   {
+    "key": "[\"invoice\",\"issued\",\"<invoice@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Seal invoice approval",
     "revision": "issued",
     "locator": "<invoice@cedar.example.invalid>",
-    "text": "Mira approved invoice CX-418 for replacement freezer seals. File the purchase confirmation in the finance folder."
+    "text": "Mira approved invoice CX-418 for replacement freezer seals. File the purchase confirmation in the finance folder.",
+    "hash": "08de1a29261d70c0726db3d994895a4026505a68bf0ceba41c239d13eb83050a"
   },
   {
+    "key": "[\"training\",\"issued\",\"<training@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Forklift refresher",
     "revision": "issued",
     "locator": "<training@cedar.example.invalid>",
-    "text": "The forklift refresher has moved to the north classroom. The instructor is Tessa and the session starts at nine."
+    "text": "The forklift refresher has moved to the north classroom. The instructor is Tessa and the session starts at nine.",
+    "hash": "b49ce6fc51e988d05bef941ae5715559d02110da09ad7adb16413be616f411ff"
   },
   {
+    "key": "[\"gate\",\"issued\",\"<gate@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Loading gate override",
     "revision": "issued",
     "locator": "<gate@cedar.example.invalid>",
-    "text": "The loading gate override code word is Juniper. Use the standard incident log before resetting the control panel."
+    "text": "The loading gate override code word is Juniper. Use the standard incident log before resetting the control panel.",
+    "hash": "a63db77af53d40949fb0086cadadca7c004eeb9966bd1f613a58a81744e7b479"
   },
   {
+    "key": "[\"reagent\",\"issued\",\"<reagent@cedar.example.invalid>\"]",
     "type": "Email",
     "title": "Calibration reagent delay",
     "revision": "issued",
     "locator": "<reagent@cedar.example.invalid>",
-    "text": "The buffer reagent shipment is delayed until Friday. The locked west cabinet has enough stock for the morning calibration."
+    "text": "The buffer reagent shipment is delayed until Friday. The locked west cabinet has enough stock for the morning calibration.",
+    "hash": "d241724d0ffecd340fb2df0ee380df66bc6f267766c2e5bec59649ff3b34e996"
   }
 ]
