@@ -15,28 +15,50 @@ export function transition(current, action) {
     state = 'executed';
     record = 'Simulated connector receipt · USD 75.00 recorded once';
   }
+  if (state === 'approved' && action === 'cancel') {
+    state = 'cancelled';
+    record = 'Posting cancelled · No connector effect';
+  }
   return { state, events: record ? [...current.events, record] : current.events };
 }
 
 if (typeof document !== 'undefined') {
   const buttons = [...document.querySelectorAll('[data-control]')];
-  const labels = { pending: 'Awaiting approval', approved: 'Approved', rejected: 'Rejected', executed: 'Receipt recorded' };
+  const labels = { pending: 'Awaiting approval', approved: 'Approved', rejected: 'Rejected', executed: 'Receipt recorded', cancelled: 'Cancelled' };
+  const hints = {
+    pending: 'Review the amount and destination before you approve.',
+    approved: 'This action is approved. Post it to the sample ledger to see the receipt.',
+    rejected: 'The invoice was rejected. No ledger entry was recorded.',
+    executed: 'The approved action completed. The sample ledger recorded one entry.',
+    cancelled: 'Posting was cancelled before execution. No ledger entry was recorded.',
+  };
   let current = transition(null, 'reset');
   function render() {
     document.querySelector('#approval-state').textContent = labels[current.state];
+    document.querySelector('#review-workspace').dataset.state = current.state;
+    document.querySelector('#review-hint').textContent = hints[current.state];
+    const receipt = document.querySelector('#review-receipt');
+    receipt.hidden = current.state !== 'executed';
+    receipt.textContent = receipt.hidden ? '' : 'Receipt INV-018 · USD 75.00 · Sample invoice ledger';
     document.querySelector('#approval-trace').replaceChildren(...current.events.map(event => {
       const item = document.createElement('li');
       item.textContent = event;
       return item;
     }));
     for (const button of buttons) {
-      if (['approve', 'reject'].includes(button.dataset.control)) button.disabled = current.state !== 'pending';
-      if (button.dataset.control === 'execute') button.disabled = current.state !== 'approved';
+      if (['approve', 'reject'].includes(button.dataset.control)) button.hidden = current.state !== 'pending';
+      if (button.dataset.control === 'execute') {
+        button.hidden = current.state !== 'approved';
+        button.disabled = button.hidden;
+      }
+      if (button.dataset.control === 'cancel') button.hidden = current.state !== 'approved';
     }
   }
   for (const button of buttons) button.addEventListener('click', () => {
     current = transition(current, button.dataset.control);
     render();
+    if (button.dataset.control === 'approve') document.querySelector('[data-control="execute"]').focus();
+    if (['reject', 'cancel', 'execute'].includes(button.dataset.control)) document.querySelector('[data-control="reset"]').focus();
   });
   render();
 }
