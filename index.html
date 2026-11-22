@@ -6,23 +6,24 @@
   <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
   <meta name="theme-color" content="#101014">
   <title>AgentGate — Traceable evidence for AI agents</title>
-  <link rel="stylesheet" href="./styles.css?v=4">
+  <link rel="stylesheet" href="./styles.css?v=5">
   <script type="module" src="./archive.mjs?v=4"></script>
+  <script type="module" src="./controls.mjs?v=5"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="shell nav">
   <a href="./" class="brand" aria-label="AgentGate home"><span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span>AgentGate</a>
-  <nav aria-label="Main navigation"><a href="#workbench">Workbench</a><a href="#evaluation">Evaluation</a><a href="#roadmap">Roadmap</a></nav>
-  <a class="outline nav-action" href="#workbench">Open demo <span aria-hidden="true">↗</span></a>
+  <nav aria-label="Main navigation"><a href="#controls">Invoice controls</a><a href="#workbench">Evidence search</a><a href="#evaluation">Evaluation</a></nav>
+  <a class="outline nav-action" href="#controls">Try the workflow <span aria-hidden="true">↗</span></a>
 </header>
 <main id="main">
   <section class="shell hero">
     <div class="hero-copy">
       <p class="eyebrow"><i></i> AgentGate / Docsearch</p>
       <h1>Trace the evidence.<br><em>Keep control.</em></h1>
-      <p class="lede">Search across documents and email, inspect the exact passage behind a result, and see how a real local model performed.</p>
-      <div class="actions"><a class="primary" href="#workbench">Open the workbench <span aria-hidden="true">↗</span></a><a class="text-link" href="#evaluation">Read the evaluation</a></div>
+      <p class="lede">Give finance teams a clear decision before an AI-proposed invoice action takes effect. Inspect the evidence, approve the exact change, and verify the connector receipt.</p>
+      <div class="actions"><a class="primary" href="#controls">Try an invoice approval <span aria-hidden="true">↗</span></a><a class="text-link" href="#workbench">Explore evidence search</a></div>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="visual-grid"></div><div class="glow"></div>
@@ -30,6 +31,16 @@
       <div class="prism"><span class="plane plane-back"></span><span class="plane plane-middle"></span><span class="plane plane-front"><b></b><b></b><b></b><b></b></span></div>
       <div class="art-caption"><span>DOCSEARCH</span><span>PDF & EMAIL EVIDENCE</span></div>
     </div>
+  </section>
+  <section class="shell section" id="controls" aria-labelledby="controls-title">
+    <div class="section-heading"><div><p class="eyebrow"><i></i> Finance operations</p><h2 id="controls-title">Approve the action. Verify the effect.</h2></div><p>Walk through one invoice action and one blocked export. This public simulation mirrors the local fixture workflow and uses only synthetic data.</p></div>
+    <div class="control-preview">
+      <article class="control-card"><p class="eyebrow">INVOICE-018</p><h3>Record an approved invoice total</h3><dl class="citation-meta"><dt>Amount</dt><dd>USD 75.00</dd><dt>Allowed destination</dt><dd>Fixture invoice ledger</dd><dt>Reviewer</dt><dd>Separate synthetic reviewer</dd><dt>State</dt><dd id="approval-state" role="status">Awaiting approval</dd></dl><div class="actions">
+        <button class="primary" type="button" data-control="approve">Approve this invoice</button><button class="outline" type="button" data-control="reject">Reject</button><button class="outline" type="button" data-control="execute" disabled>Execute approved action</button>
+      </div></article>
+      <article class="control-card"><p class="eyebrow">DECISION &amp; RECEIPT TRACE</p><h3>Verify what was recorded</h3><ol id="approval-trace"><li>Invoice action proposed · Awaiting approval</li></ol><div class="actions"><button class="outline" type="button" data-control="blocked">Try disallowed export</button><button class="outline" type="button" data-control="reset">Start over</button></div></article>
+    </div>
+    <div class="pilot-note"><div><p class="eyebrow">FIRST PILOT SCOPE</p><h3>One finance workflow, one supported connector</h3></div><p>A pilot would connect a scoped invoice source, route a single supported action to a designated reviewer, and check receipts and false blocks with the finance team. Live accounting integrations and customer pilots are pending.</p></div>
   </section>
   <section class="shell section" id="workbench" aria-labelledby="workbench-title">
     <div class="section-heading"><div><p class="eyebrow"><i></i> Interactive demo</p><h2 id="workbench-title">Evidence workbench</h2></div><p>Explore the authored Cedar Annex corpus. Inspect original and revised passages side by side through their citations.</p></div>
@@ -62,7 +73,7 @@
   <section class="shell section roadmap" id="roadmap"><div class="section-heading"><div><p class="eyebrow"><i></i> Product scope</p><h2>Where AgentGate stands</h2></div><p>Docsearch is the working retrieval reference. The security gateway has a separate implementation and evaluation path.</p></div><div class="roadmap-grid">
     <article><span class="status-label ready">Available</span><h3>Public evidence demo</h3><p>Search synthetic PDF and email passages in your browser. Compare citations and retained revisions.</p></article>
     <article><span class="status-label ready">Available</span><h3>Semantic retrieval</h3><p>Ask a new question using the browser model, or replay the authored evaluation from the Python and pgvector implementation.</p></article>
-    <article><span class="status-label">Planned</span><h3>Tool authorization gateway</h3><p>Identity-bound tool calls, data destination rules, approvals and audit evidence. The first planned test is a synthetic invoice workflow.</p></article>
+    <article><span class="status-label ready">Local prototype</span><h3>Invoice approval and receipts</h3><p>The local workbench exercises separate fixture roles, exact-action approval and a transactional SQLite receipt. Live connectors and production identity are pending.</p></article>
   </div></section>
 </main>
 <footer class="shell footer"><a href="./" class="brand">AgentGate</a><a href="https://github.com/Hassan043/agentgate-site">Website source</a></footer>
