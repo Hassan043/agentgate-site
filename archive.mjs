@@ -1,4 +1,5 @@
 import { rank } from './rank.mjs';
+import { semanticRank } from './semantic-rank.mjs';
 
 const byId = id => document.getElementById(id);
 const form = byId('search');
@@ -12,6 +13,9 @@ const rankingMode = byId('ranking-mode');
 let activeMode = 'keyword';
 let dataset;
 let requestId = 0;
+let worker;
+let modelReady = false;
+let embeddings;
 
 function loadDataset() {
   dataset ??= Promise.all(['corpus.json', 'replays.json'].map(async path => {
@@ -52,7 +56,8 @@ function render(records, context) {
     button.append(
       element('span', String(index + 1).padStart(2, '0'), 'rank'),
       element('strong', record.title),
-      element('span', `${record.type} · ${record.locator} · ${record.revision}`, 'result-meta'),
+      element('span', [record.type, record.locator, record.revision,
+        record.score === undefined ? '' : 'cosine ' + record.score.toFixed(3)].filter(Boolean).join(' · '), 'result-meta'),
     );
     button.addEventListener('click', () => showDetail(record, button));
     results.append(button);
@@ -96,17 +101,90 @@ async function run() {
 }
 
 function switchMode(mode) {
+  ++requestId;
   activeMode = mode;
   const isKeyword = mode === 'keyword';
   byId('keywords-tab').setAttribute('aria-pressed', String(isKeyword));
-  byId('semantic-tab').setAttribute('aria-pressed', String(!isKeyword));
+  byId('live-tab').setAttribute('aria-pressed', String(mode === 'live'));
+  byId('semantic-tab').setAttribute('aria-pressed', String(mode === 'semantic'));
   byId('keyword-panel').hidden = !isKeyword;
-  byId('semantic-panel').hidden = isKeyword;
+  byId('live-panel').hidden = mode !== 'live';
+  byId('semantic-panel').hidden = mode !== 'semantic';
+}
+
+function browserEmbedding(id, text) {
+  worker ??= new Worker(new URL('./semantic-worker.mjs', import.meta.url), { type: 'module' });
+  return new Promise((resolve, reject) => {
+    const session = worker;
+    const close = () => {
+      clearTimeout(timer);
+      session.removeEventListener('message', onMessage);
+      session.removeEventListener('error', onError);
+    };
+    const onError = () => {
+      close();
+      session.terminate();
+      worker = undefined;
+      modelReady = false;
+      reject(new Error('Browser model unavailable'));
+    };
+    const timer = setTimeout(onError, 180_000);
+    function onMessage({ data }) {
+      if (data.id !== id) return;
+      if (data.progress !== undefined) {
+        if (requestId === id) status.textContent = 'Downloading BGE model · ' + data.progress + '%';
+      } else {
+        close();
+        if (data.error) reject(new Error(data.error));
+        else resolve(data.vector);
+      }
+    }
+    session.addEventListener('message', onMessage);
+    session.addEventListener('error', onError);
+    session.postMessage({ id, query: text });
+  });
+}
+
+async function runLive(event) {
+  event.preventDefault();
+  const text = byId('live-query').value.trim();
+  if (!text) {
+    status.textContent = 'Enter a search question.';
+    return;
+  }
+  const selectedSource = byId('live-source').value;
+  const button = byId('live-submit');
+  const id = ++requestId;
+  button.disabled = true;
+  status.textContent = modelReady ? 'Ranking evidence…' : 'Loading the browser model…';
+  detail.replaceChildren();
+  results.replaceChildren();
+  try {
+    embeddings ??= fetch('./semantic-index.json').then(response => {
+      if (!response.ok) throw new Error('Semantic index unavailable');
+      return response.json();
+    }).catch(error => { embeddings = undefined; throw error; });
+    const [[records], index, vector] = await Promise.all([loadDataset(), embeddings, browserEmbedding(id, text)]);
+    modelReady = true;
+    if (requestId === id) render(semanticRank(records, index, vector, selectedSource), 'live BGE cosine search');
+  } catch {
+    if (requestId === id) status.textContent = 'Live semantic search is unavailable in this browser. Try again or use keyword search.';
+  } finally {
+    button.disabled = false;
+    button.textContent = modelReady ? 'Search by meaning' : 'Load model & search';
+  }
 }
 
 form.addEventListener('submit', event => { event.preventDefault(); void run(); });
 byId('keywords-tab').addEventListener('click', () => { switchMode('keyword'); void run(); });
+byId('live-tab').addEventListener('click', () => {
+  switchMode('live');
+  results.replaceChildren();
+  detail.replaceChildren(element('p', 'Select a result to inspect its passage and source.'));
+  status.textContent = 'Enter a question to run the browser model.';
+});
 byId('semantic-tab').addEventListener('click', () => { switchMode('semantic'); void run(); });
+byId('live-search').addEventListener('submit', runLive);
 cases.addEventListener('change', run);
 rankingMode.addEventListener('change', run);
 source.addEventListener('change', run);

@@ -6,8 +6,8 @@
   <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
   <meta name="theme-color" content="#101014">
   <title>AgentGate — Traceable evidence for AI agents</title>
-  <link rel="stylesheet" href="./styles.css?v=3">
-  <script type="module" src="./archive.mjs?v=3"></script>
+  <link rel="stylesheet" href="./styles.css?v=4">
+  <script type="module" src="./archive.mjs?v=4"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -36,14 +36,19 @@
     <div class="workbench">
       <div class="tabs" role="group" aria-label="Workbench mode">
         <button id="keywords-tab" aria-pressed="true" type="button">Live keyword search</button>
+        <button id="live-tab" aria-pressed="false" type="button">Live semantic search</button>
         <button id="semantic-tab" aria-pressed="false" type="button">Recorded semantic runs</button>
+      </div>
+      <div id="live-panel" class="controls" hidden>
+        <p class="mode-info">BGE runs in a background browser worker. Your first search downloads the model from Hugging Face and uses about 133 MB for model weights. Your query is processed on this device.</p>
+        <form id="live-search"><label for="live-query">Search by meaning</label><div class="field-row"><input id="live-query" type="search" maxlength="160" required placeholder="Who approved the replacement gaskets?"><select id="live-source" aria-label="Filter semantic search by source"><option value="all">All sources</option><option value="PDF">PDF</option><option value="Email">Email</option></select><button class="primary" id="live-submit" type="submit">Load model &amp; search</button></div></form>
       </div>
       <div id="keyword-panel" class="controls">
         <form id="search"><label for="query">Search the sample archive</label><div class="field-row"><input id="query" type="search" maxlength="160" required placeholder="Freezer alarm threshold"><select id="source" aria-label="Filter by source"><option value="all">All sources</option><option value="PDF">PDF</option><option value="Email">Email</option></select><button class="primary" type="submit">Search</button></div></form>
         <div class="examples" aria-label="Sample queries"><button type="button" data-query="freezer alarm threshold">Freezer threshold</button><button type="button" data-query="courier collection">Courier collection</button><button type="button" data-query="loading gate override">Gate override</button></div>
       </div>
       <div id="semantic-panel" class="controls" hidden>
-        <p class="mode-info">Explore saved rankings from the real BGE Small English model run on the authored archive. These are recorded runs. Live inference remains in the local app.</p>
+        <p class="mode-info">Explore saved rankings from the real BGE Small English model run on the authored archive. Use Live semantic search to try a new question.</p>
         <div class="replay-fields"><label>Evaluation question<select id="case"></select></label><label>Recorded mode<select id="ranking-mode"><option value="vector">Vector · BGE</option><option value="hybrid">Hybrid · BGE + keyword</option><option value="keyword">Keyword baseline</option></select></label></div>
       </div>
       <div class="workspace"><div class="result-column"><p class="workspace-heading" id="status" role="status">Loading the archive…</p><div id="results" class="result-list"></div></div><aside class="inspector" aria-labelledby="inspector-title"><p class="eyebrow">Citation inspector</p><h3 id="inspector-title">Stored evidence</h3><div id="detail"><p>Select a result to inspect its passage and source.</p></div></aside></div>
@@ -56,7 +61,7 @@
   </section>
   <section class="shell section roadmap" id="roadmap"><div class="section-heading"><div><p class="eyebrow"><i></i> Product scope</p><h2>Where AgentGate stands</h2></div><p>Docsearch is the working retrieval reference. The security gateway has a separate implementation and evaluation path.</p></div><div class="roadmap-grid">
     <article><span class="status-label ready">Available</span><h3>Public evidence demo</h3><p>Search synthetic PDF and email passages in your browser. Compare citations and retained revisions.</p></article>
-    <article><span class="status-label ready">Verified locally</span><h3>Semantic retrieval</h3><p>Python, PostgreSQL and pgvector with a local 384-dimensional BGE index. The workbench replays preserved results.</p></article>
+    <article><span class="status-label ready">Available</span><h3>Semantic retrieval</h3><p>Ask a new question using the browser model, or replay the authored evaluation from the Python and pgvector implementation.</p></article>
     <article><span class="status-label">Planned</span><h3>Tool authorization gateway</h3><p>Identity-bound tool calls, data destination rules, approvals and audit evidence. The first planned test is a synthetic invoice workflow.</p></article>
   </div></section>
 </main>
