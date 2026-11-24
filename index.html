@@ -6,9 +6,9 @@
   <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
   <meta name="theme-color" content="#101014">
   <title>AgentGate — Traceable evidence for AI agents</title>
-  <link rel="stylesheet" href="./styles.css?v=7">
+  <link rel="stylesheet" href="./styles.css?v=8">
   <script type="module" src="./archive.mjs?v=4"></script>
-  <script type="module" src="./controls.mjs?v=6"></script>
+  <script type="module" src="./controls.mjs?v=7"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,6 +40,11 @@
     <div class="section-heading"><div><p class="eyebrow"><i></i> Public sandbox</p><h2 id="controls-title">An invoice is waiting for you.</h2></div><p>You’re the reviewer for Cedar Annex. Decide whether to record this sample invoice and watch what reaches the simulated ledger.</p></div>
     <div class="review-workspace" id="review-workspace" data-state="pending">
       <div class="review-menubar"><span>Cedar Annex <b aria-hidden="true">/</b> Invoice approvals</span><button type="button" class="quiet" data-control="reset">Reset demo</button></div>
+      <ol class="demo-progress" aria-label="Invoice demo progress">
+        <li data-stage="review" aria-current="step">Review action</li>
+        <li data-stage="post">Post approved action</li>
+        <li data-stage="receipt">Inspect receipt</li>
+      </ol>
       <div class="control-preview">
         <article class="control-card review-record"><div class="review-heading"><div><p class="eyebrow">Invoice INV-018</p><h3>Equipment service</h3></div><span class="review-state" id="approval-state" role="status">Awaiting approval</span></div>
           <p class="invoice-amount">$75.00 <small>USD</small></p>

@@ -47,3 +47,29 @@
   .demo-map a { transition: none; }
   .demo-map a:hover { transform: none; }
 }
+
+.demo-progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+  margin: 0;
+  padding: .85rem 1.2rem;
+  list-style: none;
+  background: #17151c;
+  border-bottom: 1px solid var(--line);
+}
+.demo-progress li {
+  color: var(--muted);
+  padding: .4rem 0;
+  border-bottom: 2px solid #393340;
+  font-size: .875rem;
+  transition: color .2s, border-color .2s;
+}
+.demo-progress li[aria-current="step"] { color: var(--gold); border-color: var(--gold); font-weight: 700; }
+.demo-progress li.is-complete { color: var(--text); border-color: #9a8ac5; }
+@media (max-width: 420px) {
+  .demo-progress { gap: .45rem; padding-inline: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .demo-progress li { transition: none; }
+}

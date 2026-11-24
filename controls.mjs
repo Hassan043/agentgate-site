@@ -24,6 +24,7 @@ export function transition(current, action) {
 
 if (typeof document !== 'undefined') {
   const buttons = [...document.querySelectorAll('[data-control]')];
+  const stages = [...document.querySelectorAll('[data-stage]')];
   const labels = { pending: 'Awaiting approval', approved: 'Approved', rejected: 'Rejected', executed: 'Receipt recorded', cancelled: 'Cancelled' };
   const hints = {
     pending: 'Review the amount and destination before you approve.',
@@ -34,6 +35,13 @@ if (typeof document !== 'undefined') {
   };
   let current = transition(null, 'reset');
   function render() {
+    const stage = { pending: 'review', approved: 'post', executed: 'receipt' }[current.state];
+    const activeIndex = stages.findIndex(item => item.dataset.stage === stage);
+    stages.forEach((item, index) => {
+      if (index === activeIndex) item.setAttribute('aria-current', 'step');
+      else item.removeAttribute('aria-current');
+      item.classList.toggle('is-complete', activeIndex >= 0 && index < activeIndex);
+    });
     document.querySelector('#approval-state').textContent = labels[current.state];
     document.querySelector('#review-workspace').dataset.state = current.state;
     document.querySelector('#review-hint').textContent = hints[current.state];
