@@ -6,7 +6,7 @@
   <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
   <meta name="theme-color" content="#101014">
   <title>AgentGate — Traceable evidence for AI agents</title>
-  <link rel="stylesheet" href="./styles.css?v=6">
+  <link rel="stylesheet" href="./styles.css?v=7">
   <script type="module" src="./archive.mjs?v=4"></script>
   <script type="module" src="./controls.mjs?v=6"></script>
 </head>
@@ -31,6 +31,11 @@
       <div class="paper-approval"><span class="review-dot" aria-hidden="true"></span><div><strong>Approval needed</strong><small>Record $75.00 in the invoice ledger</small></div></div>
     </div>
   </section>
+  <nav class="shell demo-map" aria-label="Demo walkthrough">
+    <a href="#controls"><span>Review</span><strong>Approve a sample invoice</strong><small>Inspect the action and try a blocked export.</small></a>
+    <a href="#workbench"><span>Investigate</span><strong>Find the source evidence</strong><small>Open citations for the exact passage and revision.</small></a>
+    <a href="#evaluation"><span>Verify</span><strong>Inspect the recorded runs</strong><small>Replay difficult questions and compare outcomes.</small></a>
+  </nav>
   <section class="shell section" id="controls" aria-labelledby="controls-title">
     <div class="section-heading"><div><p class="eyebrow"><i></i> Public sandbox</p><h2 id="controls-title">An invoice is waiting for you.</h2></div><p>You’re the reviewer for Cedar Annex. Decide whether to record this sample invoice and watch what reaches the simulated ledger.</p></div>
     <div class="review-workspace" id="review-workspace" data-state="pending">
@@ -79,7 +84,7 @@
   <section class="shell section roadmap" id="roadmap"><div class="section-heading"><div><p class="eyebrow"><i></i> Product scope</p><h2>Where AgentGate stands</h2></div><p>Docsearch is the working retrieval reference. The security gateway has a separate implementation and evaluation path.</p></div><div class="roadmap-grid">
     <article><span class="status-label ready">Available</span><h3>Public evidence demo</h3><p>Search synthetic PDF and email passages in your browser. Compare citations and retained revisions.</p></article>
     <article><span class="status-label ready">Available</span><h3>Semantic retrieval</h3><p>Ask a new question using the browser model, or replay the authored evaluation from the Python and pgvector implementation.</p></article>
-    <article><span class="status-label ready">Local prototype</span><h3>Invoice approval and receipts</h3><p>The local workbench exercises separate fixture roles, exact-action approval and a transactional SQLite receipt. Live connectors and production identity are pending.</p></article>
+    <article><span class="status-label ready">Local fixture</span><h3>Gateway and receipt recovery</h3><p>The local Go gateway verifies identity and parks an exact action for review. PostgreSQL tests cover recovering a lost response from a simulated connector receipt. Live accounting integration is pending.</p></article>
   </div></section>
 </main>
 <footer class="shell footer"><a href="./" class="brand">AgentGate</a><a href="https://github.com/Hassan043/agentgate-site">Website source</a></footer>
