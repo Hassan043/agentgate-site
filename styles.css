@@ -73,3 +73,23 @@
 @media (prefers-reduced-motion: reduce) {
   .demo-progress li { transition: none; }
 }
+
+.flow-map, .decision-compare {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .85rem;
+}
+.flow-map { list-style: none; padding: 0; margin: 0; }
+.flow-map li, .decision-compare > * {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem;
+  background: linear-gradient(145deg, #211b2a, var(--panel) 75%);
+}
+.flow-map span { display: block; color: var(--gold); font-size: .875rem; margin-bottom: .4rem; }
+.decision-compare { margin-top: 1rem; }
+.decision-compare h3 { margin-bottom: .45rem; }
+.decision-compare p:not(.eyebrow) { color: var(--muted); }
+@media (max-width: 740px) {
+  .flow-map, .decision-compare { grid-template-columns: 1fr; }
+}

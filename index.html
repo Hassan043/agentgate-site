@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="AgentGate explores verifiable evidence and enforceable tool access for AI agents. Try the public Docsearch workbench.">
+  <meta name="description" content="Review AI-proposed finance actions in AgentGate's public invoice approval sandbox, then inspect the decision and receipt.">
   <meta name="theme-color" content="#101014">
-  <title>AgentGate — Traceable evidence for AI agents</title>
-  <link rel="stylesheet" href="./styles.css?v=8">
+  <title>AgentGate — Finance approvals for AI agents</title>
+  <link rel="stylesheet" href="./styles.css?v=9">
   <script type="module" src="./archive.mjs?v=4"></script>
   <script type="module" src="./controls.mjs?v=7"></script>
 </head>
@@ -20,7 +20,7 @@
 <main id="main">
   <section class="shell hero">
     <div class="hero-copy">
-      <p class="eyebrow"><i></i> AgentGate / Docsearch</p>
+      <p class="eyebrow"><i></i> AgentGate finance approvals</p>
       <h1>Your AI proposes.<br><em>Finance decides.</em></h1>
       <p class="lede">Put an approval step between an AI-proposed invoice change and your ledger. Review the amount and destination, then check the receipt after it posts.</p>
       <div class="actions"><a class="primary" href="#controls">Try an invoice approval <span aria-hidden="true">↗</span></a><a class="text-link" href="#workbench">Explore evidence search</a></div>
@@ -36,6 +36,10 @@
     <a href="#workbench"><span>Investigate</span><strong>Find the source evidence</strong><small>Open citations for the exact passage and revision.</small></a>
     <a href="#evaluation"><span>Verify</span><strong>Inspect the recorded runs</strong><small>Replay difficult questions and compare outcomes.</small></a>
   </nav>
+  <section class="shell section" aria-labelledby="flow-title">
+    <div class="section-heading"><div><p class="eyebrow">Control flow</p><h2 id="flow-title">A decision before the ledger.</h2></div><p>The browser sandbox uses a synthetic invoice. It shows what the reviewer sees and what the simulated connector records.</p></div>
+    <ol class="flow-map"><li><span>Agent</span><strong>Proposes an invoice write</strong></li><li><span>Gateway</span><strong>Checks policy and approval</strong></li><li><span>Ledger</span><strong>Records the receipt</strong></li></ol>
+  </section>
   <section class="shell section" id="controls" aria-labelledby="controls-title">
     <div class="section-heading"><div><p class="eyebrow"><i></i> Public sandbox</p><h2 id="controls-title">An invoice is waiting for you.</h2></div><p>You’re the reviewer for Cedar Annex. Decide whether to record this sample invoice and watch what reaches the simulated ledger.</p></div>
     <div class="review-workspace" id="review-workspace" data-state="pending">
@@ -57,6 +61,11 @@
       </div>
     </div>
     <div class="pilot-note"><div><p class="eyebrow">FIRST PILOT SCOPE</p><h3>One finance workflow, one supported connector</h3></div><p>A pilot would connect a scoped invoice source, route a single supported action to a designated reviewer, and check receipts and false blocks with the finance team. Live accounting integrations and customer pilots are pending.</p></div>
+    <div class="decision-compare">
+      <div><p class="eyebrow">AUTHORED INVOICE NOTE</p><h3>An unrelated request to export customer records</h3><p>The invoice total is in scope. A customer export falls outside the invoice workflow.</p></div>
+      <article><h3>Permissive fixture</h3><p>Recorded one unexpected synthetic export effect.</p></article>
+      <article><h3>Enforced fixture</h3><p>Completed the invoice task with zero unexpected effects.</p></article>
+    </div>
   </section>
   <section class="shell section" id="workbench" aria-labelledby="workbench-title">
     <div class="section-heading"><div><p class="eyebrow"><i></i> Interactive demo</p><h2 id="workbench-title">Evidence workbench</h2></div><p>Explore the authored Cedar Annex corpus. Inspect original and revised passages side by side through their citations.</p></div>
@@ -89,7 +98,8 @@
   <section class="shell section roadmap" id="roadmap"><div class="section-heading"><div><p class="eyebrow"><i></i> Product scope</p><h2>Where AgentGate stands</h2></div><p>Docsearch is the working retrieval reference. The security gateway has a separate implementation and evaluation path.</p></div><div class="roadmap-grid">
     <article><span class="status-label ready">Available</span><h3>Public evidence demo</h3><p>Search synthetic PDF and email passages in your browser. Compare citations and retained revisions.</p></article>
     <article><span class="status-label ready">Available</span><h3>Semantic retrieval</h3><p>Ask a new question using the browser model, or replay the authored evaluation from the Python and pgvector implementation.</p></article>
-    <article><span class="status-label ready">Local fixture</span><h3>Gateway and receipt recovery</h3><p>The local Go gateway verifies identity and parks an exact action for review. PostgreSQL tests cover recovering a lost response from a simulated connector receipt. Live accounting integration is pending.</p></article>
+    <article><span class="status-label ready">Local fixture</span><h3>Gateway and receipt recovery</h3><p>The local Go gateway verifies identity and parks an exact action for review. PostgreSQL tests cover recovering a lost response from a simulated connector receipt.</p></article>
+    <article><span class="status-label">Planned</span><h3>Live accounting pilot</h3><p>Provider-backed writes, model evaluation, and customer pilots are pending.</p></article>
   </div></section>
 </main>
 <footer class="shell footer"><a href="./" class="brand">AgentGate</a><a href="https://github.com/Hassan043/agentgate-site">Website source</a></footer>
