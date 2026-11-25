@@ -1,0 +1,40 @@
+:root {
+  color-scheme: dark;
+  --background: #101014;
+  --panel: #19191e;
+  --line: #37323e;
+  --text: #f4f2ed;
+  --muted: #b5acbb;
+  --accent: #f2c48d;
+  --violet: #baacf7;
+  --warm: #e9c4a6;
+  --radius: 16px;
+  --black: var(--background);
+  --gold: var(--accent);
+  font: 16px/1.55 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+button {
+  min-height: 44px;
+  padding: .48rem .85rem;
+  border: 1px solid #594e63;
+  border-radius: 9px;
+  background: #24202b;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: background .16s, transform .16s;
+}
+
+button:not(:disabled):hover { background: #392f46; transform: translateY(-1px); }
+button:disabled { opacity: .55; cursor: default; }
+.primary { background: var(--accent); border-color: var(--accent); color: #24170e; font-weight: 750; }
+.primary:hover:not(:disabled) { background: #ffdbad; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  button { transition: none; }
+  button:not(:disabled):hover { transform: none; }
+}
